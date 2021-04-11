@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meal Plan Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    
+</head>
+
+<body>
+    
+    <h1>Personalised Meal Plan Generator!</h1>
+   
+    <div id="wrap">
+        
+            <div id="page1" class="form-page ">
+                <h3>About You</h3>
+                <input id="height" class="form-input" type="text" placeholder="Your Height(cm)">
+                <input id="weight" class="form-input" type="text" placeholder="Your Weight(kg)">
+                <input id="age" class="form-input" type="text" placeholder="Your Age">
+                <button id="page1btn" class="next-page-btn">Next Step</button>
+                <div class="progress">
+                    <div class="balls b1 active-page"></div>
+                    <div class="balls b2"></div>
+                    <div class="balls b3"></div>
+                    <div class="balls b4"></div>
+                </div>
+            </div>
+
+            <div id="page2" class="form-page hidden">
+                <h3>More Info</h3>
+                <select id="gender" class="form-input" type="text">
+                    <option value="" disabled selected>Gender:</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <select  id="activity" class="form-input" type="text">
+                    <option value="" disabled selected>Actvity Level:</option>
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Lightly Active</option>
+                    <option value="1.55">Moderately Active</option>
+                    <option value="1.75">Very Active</option>
+                    <option value="1.9">Extremely Active</option>
+                </select>
+                <select id="goal" class="form-input" type="text">
+                    <option value="" disabled selected>Goal:</option>
+                    <option value="0">Maintain Weight</option>
+                    <option value="lose">Lose Weight</option>
+                    <option value="gain">Gain Weight</option>
+                </select>
+                <button id="calculate2" class="next-page-btn">Generate Meal Plan!</button>
+                <div class="progress">
+                    <div class="balls b1 active-page"></div>
+                    <div class="balls b2"></div>
+                    <div class="balls b3"></div>
+                    <div class="balls b4"></div>
+                </div>
+            </div>
+            
+            
+
+            <div id="breakfast-page" class="form-page hidden">
+            
+                <div class="meal">
+                    <h4>Breakfast</h4>
+                    <p id="breakfast"></p>
+                    <ul id=breakfastInfo></ul>
+                </div>
+                <!-- <button class="next-page-btn recipe-btn">Recipes</button> -->
+                <div class="progress">
+                    <div class="balls b1 active-page"></div>
+                    <div class="balls b2"></div>
+                    <div class="balls b3"></div>
+                    <div class="balls b4"></div>
+                </div>
+            </div>
+
+            <div id="lunch-page" class="form-page hidden">
+                <h3 id="target-message">x</h3>
+                <div class="meal">
+                    <h4>Lunch</h4>
+                    <p id="lunch"></p>
+                    <ul id=lunchInfo></ul>
+                </div>
+                <button id="nutrition-info" class="next-page-btn">Nutrition Info</button>
+                
+                <div class="progress">
+                    <div class="balls b1 active-page"></div>
+                    <div class="balls b2"></div>
+                    <div class="balls b3"></div>
+                    <div class="balls b4"></div>
+                </div>
+            </div>
+
+            <div id="dinner-page" class="form-page hidden">
+                <div class="meal">
+                    <h4>Dinner</h4>
+                    <p id="dinner"></p>
+                    <ul id=dinnerInfo></ul>
+                </div>
+                <!-- <button class="next-page-btn recipe-btn">Recipes</button> -->
+                <div class="progress">
+                    <div class="balls b1 active-page"></div>
+                    <div class="balls b2"></div>
+                    <div class="balls b3"></div>
+                    <div class="balls b4"></div>
+                </div>
+            </div>
+
+            <div id="page4" class="form-page hidden">
+                <h3>Nutrition</h3>
+                <div class="canvas-holder">
+                    <canvas id="pie-chart" width="3" height="1"></canvas>
+                </div>
+                <div class="progress">
+                    <div class="balls b1 active-page"></div>
+                    <div class="balls b2"></div>
+                    <div class="balls b3"></div>
+                    <div class="balls b4"></div>
+                </div>
+            </div>
+
+        
+    </div>
+
+
+
+<script src="./app.js"></script>
+
+
+</body>
+
+</html> 
